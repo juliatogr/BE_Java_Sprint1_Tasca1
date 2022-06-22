@@ -1,7 +1,29 @@
 package n1exercici1;
 
 public class InstrumentPercussio extends Instrument {
+	
+	static {
+		// El bloc nomès s'executarà el primer cop que es carregui la classe,
+		// abans d'inicialitzar cap objecte i entrar al constructor.
+		System.out.println("Has carregat la classe InstrumentPercussio.");
+	}
+	
+	{
+		// El bloc s'executarà cada cop que s'instancïi un objecte de la classe.
+		System.out.println("Has inicialitzat un Instrument de Percussió.");
+	}
+	
+	public InstrumentPercussio(String nom, int preu) {
+		super(nom, preu);
+		//Desprès de cridar al super, es crida al bloc d'inicialització automàticament.
+	}
+	
 	public void tocar() {
-		System.out.println("EstÃ  sonant un instrument de percussio.");
+		System.out.println("Està sonant un instrument de percussio.");
+	}
+	
+	@Override
+	public String toString() {
+		return "Sóc un/a " + nom + " i pertanyo als Instruments de Percussió. Tinc un cost de " + preu + " €";
 	}
 }
