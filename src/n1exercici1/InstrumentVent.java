@@ -11,12 +11,14 @@ public class InstrumentVent extends Instrument {
 	
 	{
 		// El bloc s'executarà cada cop que s'instancïi un objecte de la classe.
-		System.out.println("Has inicialitzat un Instrument de Vent.");
+		System.out.println("Estàs instanciant un objecte de InstrumentVent.");
 	}
 	
 	public InstrumentVent(String nom, int preu) {
 		super(nom, preu);
 		//Desprès de cridar al super, es crida al bloc d'inicialització automàticament.
+		// Després, continua amb el codi del constructor.
+		System.out.println("Has instanciat un objecte de InstrumentVent");
 	}
 	
 	public void tocar() {
